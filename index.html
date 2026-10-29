@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17271f">
+  <meta name="description" content="Thoughtfully sourced specialty coffee and loose-leaf tea, delivered on your schedule.">
+
+  <title>EMBER & LEAF — Coffee & Tea, Considered</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <div class="announcement">
+    A little ritual, delivered. Free shipping on subscriptions over ₹999.
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Ember and Leaf home">
+      <span class="brand-mark" aria-hidden="true">E<span>&</span>L</span>
+      <span class="brand-name">
+        EMBER <i>&</i> LEAF
+        <small>COFFEE · TEA · RITUAL</small>
+      </span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-expanded="false"
+      aria-controls="mainNav"
+      aria-label="Toggle navigation"
+    >☰</button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#shop">Shop</a>
+      <a href="#story">Our philosophy</a>
+      <a href="#subscription">Build a subscription</a>
+    </nav>
+
+    <button class="cart-button" id="openCart" aria-label="Open shopping bag">
+      Bag <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">
+          <span></span> GOOD THINGS, BREWED SLOWLY
+        </p>
+
+        <h1>Your daily pause,<br><em>beautifully</em> delivered.</h1>
+
+        <p class="hero-intro">
+          Small-batch coffee and expressive loose-leaf tea, chosen for
+          the moments that matter. Make a ritual of it.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-dark" href="#shop">
+            Explore the collection <span>↗</span>
+          </a>
+          <a class="text-link" href="#subscription">
+            Create your subscription <span>→</span>
+          </a>
+        </div>
+
+        <div class="hero-notes">
+          <span>✳ Carefully sourced</span>
+          <span>✳ Roasted & packed fresh</span>
+          <span>✳ Your schedule, your ritual</span>
+        </div>
+      </div>
+
+      <div
+        class="hero-art"
+        role="img"
+        aria-label="Coffee beans and a warm cup on a wooden table"
+      >
+        <div class="hero-image"></div>
+        <div class="hero-stamp">
+          <span>GOOD</span>
+          <strong>BREW</strong>
+          <span>EVERY DAY</span>
+        </div>
+        <div class="hero-caption">A better kind of everyday.</div>
+      </div>
+    </section>
+
+    <!-- OUR COMMITMENTS -->
+    <section class="trust-strip" aria-label="Our commitments">
+      <div><strong>01</strong><span>Thoughtfully sourced</span></div>
+      <div><strong>02</strong><span>Freshness first</span></div>
+      <div><strong>03</strong><span>Made for your taste</span></div>
+      <div><strong>04</strong><span>Flexible deliveries</span></div>
+    </section>
+
+    <!-- SHOP -->
+    <section class="section shop-section" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE COLLECTION</p>
+          <h2>Find your <em>favourite</em> flavour.</h2>
+        </div>
+        <p>
+          From slow Sunday coffees to calming evening cups,
+          meet your next daily essential.
+        </p>
+      </div>
+
+      <div class="shop-controls">
+        <div class="filter-tabs" role="group" aria-label="Filter products">
+          <button class="filter-tab active" data-filter="all" aria-pressed="true">
+            All blends
+          </button>
+          <button class="filter-tab" data-filter="coffee" aria-pressed="false">
+            Coffee
+          </button>
+          <button class="filter-tab" data-filter="tea" aria-pressed="false">
+            Loose-leaf tea
+          </button>
+        </div>
+
+        <label class="sort-label">
+          Sort by
+          <select id="sortProducts" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: low to high</option>
+            <option value="price-high">Price: high to low</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="story-section" id="story">
+      <div
+        class="story-photo"
+        role="img"
+        aria-label="Freshly brewed coffee beside coffee beans"
+      ></div>
+
+      <div class="story-copy">
+        <p class="eyebrow">A SMALLER, SLOWER KIND OF GOOD</p>
+        <h2>Good ingredients.<br><em>Better moments.</em></h2>
+
+        <p>
+          We believe the best cup is the one you look forward to.
+          Our collection brings together characterful coffees and
+          fragrant teas, with clear tasting notes so you can choose
+          what feels right.
+        </p>
+
+        <div class="story-points">
+          <div>
+            <b>01</b>
+            <span>
+              <strong>Know what’s in your cup</strong>
+              <small>Clear notes, origin details and brewing tips.</small>
+            </span>
+          </div>
+          <div>
+            <b>02</b>
+            <span>
+              <strong>Make it yours</strong>
+              <small>Choose the blend, pack size and delivery rhythm.</small>
+            </span>
+          </div>
+        </div>
+
+        <a href="#subscription" class="text-link">
+          Build a ritual that fits <span>→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SUBSCRIPTION BUILDER -->
+    <section class="section subscription-section" id="subscription">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR RITUAL, YOUR RULES</p>
+          <h2>Build your <em>subscription.</em></h2>
+        </div>
+        <p>
+          Pick your delivery rhythm, choose your blends, and tell us
+          when you want your next cup to arrive.
+        </p>
+      </div>
+
+      <div class="builder-layout">
+        <div class="builder-card">
+          <div class="steps" aria-label="Subscription steps">
+            <span class="step active" data-step-indicator="1">
+              01 <small>Schedule</small>
+            </span>
+            <span class="step" data-step-indicator="2">
+              02 <small>Choose blends</small>
+            </span>
+            <span class="step" data-step-indicator="3">
+              03 <small>Delivery</small>
+            </span>
+          </div>
+
+          <form id="subscriptionForm" novalidate>
+            <!-- STEP 1 -->
+            <section class="wizard-panel active" data-panel="1">
+              <p class="eyebrow">STEP ONE</p>
+              <h3>How often should we arrive?</h3>
+
+              <div class="field-block">
+                <label for="frequency">Delivery frequency</label>
+                <select id="frequency" required>
+                  <option value="weekly">Weekly</option>
+                  <option value="monthly" selected>Monthly (every 4 weeks)</option>
+                </select>
+              </div>
+
+              <div class="field-block">
+                <label for="duration">Subscription length</label>
+                <select id="duration" required>
+                  <option value="1">1 month</option>
+                  <option value="3" selected>3 months</option>
+                  <option value="6">6 months</option>
+                  <option value="12">12 months</option>
+                  <option value="18">18 months</option>
+                </select>
+                <small class="field-help">
+                  You can review the full estimated total before confirming.
+                </small>
+              </div>
+
+              <div class="choice-note">
+                <span>✦</span>
+                <p>
+                  <strong>Flexible by design</strong><br>
+                  Choose a plan length that works for you. This demo
+                  calculates an estimate; it does not charge you.
+                </p>
+              </div>
+
+              <button class="button button-dark full" type="button" data-next="2">
+                Choose your blends <span>→</span>
+              </button>
+            </section>
+
+            <!-- STEP 2 -->
+            <section class="wizard-panel" data-panel="2">
+              <p class="eyebrow">STEP TWO</p>
+              <h3>What would you love to brew?</h3>
+
+              <p class="muted">
+                Choose one or more products. Each selection can have
+                its own pack size and quantity per delivery.
+              </p>
+
+              <div class="blend-picker" id="blendPicker"></div>
+
+              <div class="builder-actions">
+                <button class="button button-outline" type="button" data-back="1">
+                  ← Back
+                </button>
+                <button class="button button-dark" type="button" data-next="3">
+                  Delivery details <span>→</span>
+                </button>
+              </div>
+            </section>
+
+            <!-- STEP 3 -->
+            <section class="wizard-panel" data-panel="3">
+              <p class="eyebrow">STEP THREE</p>
+              <h3>Where should it arrive?</h3>
+
+              <div class="form-grid">
+                <div class="field-block">
+                  <label for="customerName">Full name</label>
+                  <input id="customerName" autocomplete="name" required placeholder="Your name">
+                </div>
+
+                <div class="field-block">
+                  <label for="customerEmail">Email address</label>
+                  <input id="customerEmail" type="email" autocomplete="email" required placeholder="you@example.com">
+                </div>
+
+                <div class="field-block full-span">
+                  <label for="customerPhone">Phone number</label>
+                  <input id="customerPhone" type="tel" autocomplete="tel" required minlength="10" placeholder="10-digit phone number">
+                </div>
+
+                <div class="field-block full-span">
+                  <label for="customerAddress">Delivery address</label>
+                  <textarea id="customerAddress" autocomplete="street-address" rows="3" required placeholder="House / flat, street, area, city, state, PIN code"></textarea>
+                </div>
+
+                <div class="field-block">
+                  <label for="deliveryDay">Preferred delivery day</label>
+                  <select id="deliveryDay" required>
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+                  </select>
+                </div>
+
+                <div class="field-block">
+                  <label for="deliveryWindow">Preferred time window</label>
+                  <select id="deliveryWindow" required>
+                    <option value="morning">Morning (8 AM–12 PM)</option>
+                    <option value="afternoon">Afternoon (12 PM–4 PM)</option>
+                    <option value="evening">Evening (4 PM–8 PM)</option>
+                  </select>
+                </div>
+              </div>
+
+              <label class="check-row">
+                <input type="checkbox" id="termsCheck" required>
+                <span>
+                  I have reviewed the plan and understand this demo does not
+                  process payment or create a real shipment.
+                </span>
+              </label>
+
+              <div class="builder-actions">
+                <button class="button button-outline" type="button" data-back="2">
+                  ← Back
+                </button>
+                <button class="button button-dark" type="submit">
+                  Review subscription <span>→</span>
+                </button>
+              </div>
+            </section>
+          </form>
+        </div>
+
+        <!-- SUBSCRIPTION SUMMARY -->
+        <aside class="summary-card" aria-label="Subscription summary">
+          <p class="eyebrow">YOUR PLAN</p>
+          <h3>A little goodness, on repeat.</h3>
+
+          <div class="summary-line">
+            <span>Delivery rhythm</span>
+            <strong id="summaryFrequency">Monthly</strong>
+          </div>
+
+          <div class="summary-line">
+            <span>Plan length</span>
+            <strong id="summaryDuration">3 months</strong>
+          </div>
+
+          <div class="summary-line">
+            <span>Selected blends</span>
+            <strong id="summaryItems">0 items</strong>
+          </div>
+
+          <div class="summary-line">
+            <span>Per delivery</span>
+            <strong id="summaryDelivery">₹0</strong>
+          </div>
+
+          <div class="summary-total">
+            <span>Estimated plan total</span>
+            <strong id="summaryTotal">₹0</strong>
+          </div>
+
+          <small class="summary-disclaimer">
+            Estimate only. Final pricing, delivery fees, taxes, stock,
+            payment and subscription management require a connected backend.
+          </small>
+
+          <div class="summary-leaf" aria-hidden="true">✳</div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="quote-section">
+      <span class="quote-mark">“</span>
+      <blockquote>
+        A good cup doesn’t need a special occasion. It can be the occasion.
+      </blockquote>
+      <p>MAKE SPACE FOR A SMALL RITUAL.</p>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+      <div>
+        <p class="eyebrow">NOTES FROM THE BREW ROOM</p>
+        <h2>A little inspiration<br>for your <em>inbox.</em></h2>
+      </div>
+
+      <form id="newsletterForm" class="newsletter-form">
+        <label class="sr-only" for="newsletterEmail">Email address</label>
+        <input id="newsletterEmail" type="email" required placeholder="Your email address">
+        <button class="button button-light" type="submit">
+          Sign me up <span>→</span>
+        </button>
+        <small>No spam, just good things. Demo only; no email is sent.</small>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-mark">E<span>&</span>L</span>
+      <span class="brand-name">
+        EMBER <i>&</i> LEAF
+        <small>COFFEE · TEA · RITUAL</small>
+      </span>
+    </a>
+
+    <p>Thoughtfully sourced. Lovingly brewed.</p>
+
+    <div class="footer-links">
+      <a href="#shop">Shop</a>
+      <a href="#subscription">Subscriptions</a>
+      <a href="#story">Our philosophy</a>
+    </div>
+
+    <small>
+      © <span id="currentYear"></span> Ember & Leaf. Demo storefront — not a live checkout.
+    </small>
+  </footer>
+
+  <!-- SHOPPING BAG DRAWER -->
+  <div class="cart-overlay" id="cartOverlay" hidden>
+    <button class="overlay-scrim" id="closeCartScrim" aria-label="Close shopping bag"></button>
+
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="drawer-heading">
+        <h2 id="cartTitle">Your bag <span id="drawerCount">(0)</span></h2>
+        <button class="icon-button" id="closeCart" aria-label="Close shopping bag">×</button>
+      </div>
+
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">₹0</strong>
+        </div>
+        <small>Shipping and taxes calculated at checkout in a real store.</small>
+        <button class="button button-dark full" id="cartCheckout">
+          Build a subscription instead <span>→</span>
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- SUBSCRIPTION CONFIRMATION MODAL -->
+  <div class="modal-backdrop" id="confirmationModal" hidden>
+    <section class="confirmation-modal" role="dialog" aria-modal="true" aria-labelledby="confirmationTitle">
+      <button class="icon-button modal-close" id="closeConfirmation" aria-label="Close confirmation">×</button>
+
+      <span class="success-icon">✓</span>
+      <p class="eyebrow">YOUR PLAN SUMMARY</p>
+      <h2 id="confirmationTitle">Your ritual is taking shape.</h2>
+      <p id="confirmationMessage">Review your selected plan below.</p>
+
+      <div id="confirmationDetails" class="confirmation-details"></div>
+
+      <p class="modal-note">
+        This is a front-end demo. No order has been sent, no payment has
+        been taken and no delivery has been scheduled.
+      </p>
+
+      <button class="button button-dark full" id="finishConfirmation">
+        Back to the website
+      </button>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
